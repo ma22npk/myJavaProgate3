@@ -2,7 +2,8 @@
 // Personクラスを作り、Mainクラスのmainメソッド以外をPersonクラスに移します。こうすることで、mainメソッド以外の「ロジック（論理）」部分をPersonクラスにまとめ、実行部分とロジック部分を切り分けることができます。このように分割することで、Mainクラスは実行用のクラス、Personクラスはロジックをまとめるクラスという役割分担が明確になります。
 
 // Personクラスを作る [END] ----------------------------------------
-
+//Mathクラス（ライブラリ）の読み込み
+//import java.lang.Math;
 public class Person {
   public static void printData(String name, int age, double height, double weight) {
     System.out.println("私の名前は" + name + "です");
