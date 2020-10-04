@@ -99,22 +99,42 @@ class Main {
   // メソッドからメソッドを呼ぶ [START] ========================================
   // メソッドは、mainメソッド以外のメソッドから呼び出すことも可能です。プログラムの部品であるメソッドが、相互に助けあってプログラムを形作ります。
 
-  //ここで全てのメソッドを総合して計算する
+  // ここで全てのメソッドを総合して計算する
   // 結果5.5
-  public static void main(String[] args) {
-    System.out.println(average(3, 8));
-  }
+  // public static void main(String[] args) {
+  // System.out.println(average(3, 8));
+  // }
 
-  // 計算結果を小数点込みで２で割るメソッド
-  public static double average(int a, int b) {
-    int total = add(a, b);
-    return (double) total / 2;
-  }
-//a + bで足し算を行うメソッド
-  public static int add(int a, int b) {
-    return a + b;
-  }
+  // // 計算結果を小数点込みで２で割るメソッド
+  // public static double average(int a, int b) {
+  // int total = add(a, b);
+  // return (double) total / 2;
+  // }
+
+  // // a + bで足し算を行うメソッド
+  // public static int add(int a, int b) {
+  // return a + b;
+  // }
 
   // メソッドからメソッドを呼ぶ [END] ==========================================
+  // 真偽値を返す [START] ========================================
+  // 最後に、真偽値を返すメソッドも作ってみましょう。真偽値のデータ型はbooleanなので、メソッド定義は下図のようになります。isEvenメソッドは引数の値が偶数かどうかを調べ、偶数であればtrue、奇数であればfalseを返します。
+
+  //偶数か偶数でないかを判定し、結果を出力するメソッド
+  public static void main(String[] args) {
+    int number = 9;
+    if (isEven(number)) {
+      System.out.println(number + "は偶数です");
+    } else {
+      System.out.println(number + "は奇数です");
+    }
+  }
+
+  // 半分に割った時割り切れる数字を返すメソッド isEven を定義する
+  public static boolean isEven(int a) {
+
+    return a % 2 == 0;
+  }
+  // 真偽値を返す [END] ==========================================
 
 }
