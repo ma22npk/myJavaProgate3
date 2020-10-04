@@ -22,16 +22,30 @@ import java.util.Scanner;
 
 class Main {
   // Scannerの処理の流れ [START] ---------------------------------------
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("あなたの名前:");
-    // 文字列の入力を受け取る
-    String name = scanner.next();
-    System.out.println("あなたの名前は" + name + "です");
-  }
-  //結果:コンソールで入力した内容が名前として出力される
+  // public static void main(String[] args) {
+  // Scanner scanner = new Scanner(System.in);
+  // System.out.println("あなたの名前:");
+  // // 文字列の入力を受け取る
+  // String name = scanner.next();
+  // System.out.println("あなたの名前は" + name + "です");
+  // }
+  // 結果:コンソールで入力した内容が名前として出力される
 
   // Scannerの処理の流れ [END] -----------------------------------------
+  // 数値の入力を受け取る
+  // Scannerを用いて、整数と小数を受け取る方法は下図です。整数を受け取るメソッドはnextIntメソッド、小数を受け取るメソッドはnextDoubleメソッドです。
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("あなたの名前");
+    String name = scanner.next();
+    System.out.println("あなたの年齢");
+    int age = scanner.nextInt();
+    System.out.println("あなたの体重");
+    double weight = scanner.nextDouble();
+    System.out.println("あなたの名前は" + name + "です");
+    System.out.println("あなたの年齢は" + age + "歳です");
+    System.out.println("あなたの体重は" + weight + "kgです");
+  }
 
   // ブロック（{}で囲まれた部分）の中に、そのメソッドが行う処理を記述します。
   // public static void main(String[] args) {
