@@ -44,17 +44,17 @@ class Main {
   // ...
   // }
   // （例）
-  public static void main(String[] args) {
-    // それぞれ年齢に関する引数を追加
-    printData("Kate Jones", 27);
-    printData("John Christopher Smith", 65);
-  }
+  // public static void main(String[] args) {
+  // // それぞれ年齢に関する引数を追加
+  // printData("Kate Jones", 27);
+  // printData("John Christopher Smith", 65);
+  // }
 
-  public static void printData(String name, int age) {
-    System.out.println("私の名前は" + name + "です");
-    // 「年齢は◯◯歳です」と出力
-    System.out.println("年齢は" + age + "歳です");
-  }
+  // public static void printData(String name, int age) {
+  // System.out.println("私の名前は" + name + "です");
+  // // 「年齢は◯◯歳です」と出力
+  // System.out.println("年齢は" + age + "歳です");
+  // }
 
   // （結果）
   // 私の名前はKate Jonesです
@@ -64,4 +64,30 @@ class Main {
 
   // 複数の引数を持つメソッド [END] -----------------------------------------
   // 引数 [END] ==========================================
+
+  // 戻り値のあるメソッド [START] ========================================
+  // メソッドの中でreturnを使うと、returnの値をメソッドの呼び出し元に返すことができます。
+  // また、戻り値があるメソッドは、戻り値のデータ型を指定します。ここまで定型だった「public static void」のvoidの部分で指定します。
+  // （例）
+  // public static 戻り値のデータ型 メソッド名(引数) {
+  // return 戻り値;
+  // }
+
+  // 戻り値の具体例 [START] ---------------------------------------
+  // 結果20
+  public static void main(String[] args) {
+    int total = add(7, 5, 8);
+
+    System.out.println(total);
+  }
+
+  public static int add(int a, int b, int c) {
+    return a + b + c;
+  }
+
+  //void:これまで定型だったvoidとは何でしょうか。voidは戻り値がない、という意味です。下図のhelloメソッドには、returnはなく戻り値はありません。このように戻り値のない（returnがない）メソッドには、voidを指定します。
+  // 戻り値の具体例 [END] -----------------------------------------
+
+  // 戻り値のあるメソッド [END] ==========================================
+
 }
